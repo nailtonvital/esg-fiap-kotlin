@@ -1,4 +1,5 @@
-import androidx.compose.foundation.BorderStroke
+package com.nailtonvital.fiap.screens
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -19,6 +20,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Divider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
@@ -26,15 +28,19 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.nailtonvital.fiap.R
+import androidx.navigation.compose.rememberNavController
 import kotlin.random.Random
 
+@Preview(showBackground = true)
+@Composable
+fun CollaboratorsScreenPreview() {
+    CollaboratorsScreen(navController = rememberNavController())
+}
 @Composable
 fun CollaboratorsScreen(navController: NavController) {
     val activitiesMap = mapOf(
@@ -63,10 +69,7 @@ fun CollaboratorsScreen(navController: NavController) {
                 onClick = { navController.navigateUp() },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .border(
-                        BorderStroke(1.dp, Color.White),
-                        shape = RoundedCornerShape(14.dp)
-                    )
+
             ) {
                 Row(
                     modifier = Modifier
@@ -83,6 +86,7 @@ fun CollaboratorsScreen(navController: NavController) {
                         text = "Voltar",
                         color = Color.White
                     )
+
                 }
             }
             Text(
@@ -92,7 +96,7 @@ fun CollaboratorsScreen(navController: NavController) {
                 color = Color.White,
                 modifier = Modifier.fillMaxWidth()
             )
-            Spacer(modifier = Modifier.height(8.dp)) // Espaçamento maior entre o título e o texto
+
             Text(
                 text = "Pontuação total: 1982",
                 fontSize = 14.sp,
@@ -100,8 +104,14 @@ fun CollaboratorsScreen(navController: NavController) {
                 color = Color.Gray,
                 modifier = Modifier.fillMaxWidth() // Usa a largura disponível
             )
+            Divider(
+                color = Color.White,
+                thickness = 1.dp,
+                modifier = Modifier.fillMaxWidth() // Linha ocupa toda a largura disponível
+                    .padding(vertical = 8.dp)
+            )
             Spacer(modifier = Modifier.height(16.dp)) // Espaçamento entre o texto e a lista de atividades
-            ActivitiesList(activitiesMap = activitiesMap) // Supondo que ActivitiesList seja uma função composable que renderiza a lista
+            ActivitiesList(activitiesMap = activitiesMap) // Supondo que com.nailtonvital.fiap.screens.ActivitiesList seja uma função composable que renderiza a lista
         }
 
         Button(
@@ -124,6 +134,7 @@ fun Activities(activity: String, points: Int) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
+            .padding(5.dp)
 
             .border(
                 width = 1.dp,

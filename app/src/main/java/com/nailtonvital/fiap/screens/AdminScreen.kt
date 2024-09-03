@@ -100,7 +100,7 @@ fun AdminScreen(navController: NavController) {
                 .align(Alignment.BottomCenter)
         ) {
             Button(
-                onClick = { /*TODO*/ },
+                onClick = { navController.navigate("addCompanyScreen") },
                 colors = ButtonDefaults.buttonColors(Color(0xFFD41854)),
                 modifier = Modifier
                     .padding(16.dp)
@@ -111,7 +111,7 @@ fun AdminScreen(navController: NavController) {
             }
 //            Spacer(modifier = Modifier.height(8.dp)) // Espaçamento entre os botões
             Button(
-                onClick = { /*TODO*/ },
+                onClick = { navController.navigate("addCompanyScreen") },
                 colors = ButtonDefaults.buttonColors(Color(0xFFD41854)),
                 modifier = Modifier
                     .padding(16.dp)
@@ -122,7 +122,7 @@ fun AdminScreen(navController: NavController) {
             }
 //            Spacer(modifier = Modifier.height(8.dp)) // Espaçamento entre os botões
             Button(
-                onClick = { /*TODO*/ },
+                onClick = { navController.navigate("addCompanyScreen") },
                 colors = ButtonDefaults.buttonColors(Color(0xFFD41854)),
                 modifier = Modifier
                     .padding(16.dp)
