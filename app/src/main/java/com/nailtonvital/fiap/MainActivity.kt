@@ -1,6 +1,5 @@
 package com.nailtonvital.fiap
 
-import com.nailtonvital.fiap.screens.CollaboratorsScreen
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -10,10 +9,11 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.nailtonvital.fiap.screens.AdminScreen
+import com.nailtonvital.fiap.screens.CollaboratorsScreen
 import com.nailtonvital.fiap.screens.LoginScreen
 import com.nailtonvital.fiap.ui.theme.MyApplicationTheme
 
@@ -22,7 +22,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MyApplicationTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
@@ -31,37 +30,37 @@ class MainActivity : ComponentActivity() {
                     NavHost(
                         navController = navController,
                         startDestination = "login"
-                    ){
-                        composable(route="login"){LoginScreen(navController)}
-                        composable(route="collaborators"){ CollaboratorsScreen(navController) }
-                        composable(route="admin"){ AdminScreen(navController)}
+                    ) {
+                        composable(route = "login") { LoginScreen(navController) }
+                        composable(route = "collaborators") { CollaboratorsScreen(navController) }
+                        composable(route = "admin") { AdminScreen(navController) }
                     }
                 }
             }
         }
     }
-
-    private fun AdminScreen(navController: NavHostController) {
-        TODO("Not yet implemented")
-    }
 }
+
 @Preview(showBackground = true)
 @Composable
-fun AdminScreenPreview() {
-    AdminScreen(navController = rememberNavController())
-}
-
-fun AdminScreen(navController: NavHostController) {
-    TODO("Not yet implemented")
+fun LoginScreenPreview() {
+    MyApplicationTheme {
+        LoginScreen(navController = rememberNavController())
+    }
 }
 
 @Preview(showBackground = true)
 @Composable
 fun CollaboratorsScreenPreview() {
-    CollaboratorsScreen(navController = rememberNavController())
+    MyApplicationTheme {
+        CollaboratorsScreen(navController = rememberNavController())
+    }
 }
+
 @Preview(showBackground = true)
 @Composable
-fun LoginScreenPreview() {
-    LoginScreen(navController = rememberNavController())
+fun AdminScreenPreview() {
+    MyApplicationTheme {
+        AdminScreen(navController = rememberNavController())
+    }
 }
