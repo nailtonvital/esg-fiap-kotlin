@@ -2,4 +2,6 @@
 ## Screenshots
 Home/Login | Colaboradores | Administrador
 :-----:|:-----:|:-----:
-![Screenshot_2024-09-01-19-18-19-734_com nailtonvital fiap](https://github.com/user-attachments/assets/f13d3584-041f-4370-aeb9-1c9e9a3ca83d) | ![Screenshot_2024-09-01-19-18-25-457_com nailtonvital fiap](https://github.com/user-attachments/assets/951bc10c-832c-47be-95d5-d91c859bf41b) | ![Screenshot_2024-09-01-19-18-22-681_com nailtonvital fiap](https://github.com/user-attachments/assets/a482e2f8-410c-490d-8496-a96126ebf039)
+ ![Captura de tela 2024-09-05 031008](https://github.com/user-attachments/assets/6c282271-8289-4323-9ac3-013da91be22c) |![Captura de tela 2024-09-05 031113](https://github.com/user-attachments/assets/e0fe932c-a73d-42b4-b5cc-bde8902040e3) | ![image](https://github.com/user-attachments/assets/4d81787e-6ad6-4ef7-b80b-79160a32bc0a)
+
+
